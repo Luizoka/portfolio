@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
+
+:root{
+    --cor-azul: #22D4FD;
+    --cor-preta: #000000;
+    --cor-branco: #F6F6F6;
+    --cor-vermelho:rgb(255, 32, 32);
+    --cor-cinza:#272727;
+
+    --fonte-Monteserrat: 'Montserrat', 'sans-serif';
+    --fonte-Krona: 'Krona One', 'sans-serif';
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--cor-preta);
+    color: var(--cor-branco);
+    box-sizing: border-box;
+    width: auto;
+    /* sizing
+       width
+    boas praticas para deixar tudo dentro do border-box
+    
+    100vh é preencher todo viewport presente lá no head
+    a viewport é a porção de área visível de um plano */
+}
+
+.cabecalho {
+    font-family: var(--fonte-Monteserrat);
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.cabecalho__menu {
+    padding: 1.5% 0 0 9%;
+    display: flex;
+    gap: 20px;
+}
+
+.cabecalho__menu__link {
+    text-decoration: none;
+    color: var(--cor-azul);
+}
+
+.cabecalho__menu__link:hover {
+    transform: scale(1.05);
+}
+
+.destaqueTitulo {
+    color: var(--cor-azul);
+}
+
+.destaqueLinguagem {
+    color: var(--cor-vermelho);
+}
+
+.apresentacao {
+    padding: 2% 10.5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 82px;
+}
+
+.aparesentacao__conteudo {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.aparesentacao__conteudo__titulo {
+    font-size: 36px;
+    font-family: var(--fonte-Krona)
+}
+
+.aparesentacao__conteudo__texto {
+    font-size: 24px;
+    font-family: var(--fonte-Monteserrat)
+}
+
+.aparesentacao__botoes {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.aparesentacao__botoes__subtitulo {
+    font-family: var(--fonte-Krona);
+    font-weight: 400;
+    font-size: 24px;
+}
+
+.aparesentacao__botoes_link {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    width: 60%;
+    color: var(--cor-branco);
+    text-align: center;
+    border: 2px solid var(--cor-azul);
+    border-radius: 8px;
+    font-size: 24px;
+    font-weight: 600;
+    padding: 21.5px 0;
+    text-decoration: none;
+    font-family: var(--fonte-Monteserrat);
+}
+
+.aparesentacao__botoes_link:hover {
+    background-color:var(--cor-cinza);
+    transform: scale(1.01);
+}
+
+.aparesentacao__botoes_link__img {
+    width: 29px;
+}
+
+.foto{
+    width: 50%;
+}
+
+.foto:hover {
+    transform: scale(1.01);
+}
+
+.rodape {
+    color: var(--cor-preta);
+    background-color: var(--cor-azul);
+    font-family: var(--fonte-Krona);
+    display: flex;
+    justify-content: center;
+    padding: 0.5%;
+    border-radius: 5%;
+    font-size: small;
+}
+
+@media (max-width: 1200px){
+    .cabecalho{
+        padding: 4%;
+    }
+
+    .cabecalho__menu{
+        padding: 0 0 0 1%;
+        justify-content: center;
+    }
+    
+    .apresentacao{
+        padding: 5%;
+        flex-direction: column-reverse;
+    }
+
+    .aparesentacao__conteudo{
+        width: 85%;
+    }
+
+    .aparesentacao__botoes__subtitulo{
+        font-size: 110%;
+    }
+
+    .aparesentacao__botoes_link{
+        width: auto;
+    }
+}
+
+@media(max-width:800px){
+    .aparesentacao__botoes_link{
+        width: 100%;
+    }
+}
